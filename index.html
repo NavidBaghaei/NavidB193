@@ -1,0 +1,116 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bikini Bottom</title>
+    <style>
+    /* Existing styles */
+    body { font-family: Arial, sans-serif; }
+    header { background-color: #3498db; padding: 10px; }
+    #header-title { font-size: 24px; color: #fff; }
+    #header-nav a { margin: 0 10px; color: #fff; text-decoration: none; }
+    #quiz-section { margin-left: 200px; }
+    .quiz-question { margin-top: 20px; }
+    
+    /* New styles for the FAQ sidebar */
+    #faq-sidebar {
+        float: right;  /* Position sidebar on the right */
+        width: 200px;
+        background-color: #3498db;
+        padding: 10px;
+    }
+    #faq-header {
+        font-size: 20px;
+        color: #fff;
+        margin-bottom: 10px;
+    }
+    .faq-item .faq-question {
+        cursor: pointer;
+        margin-top: 10px;
+    }
+    .faq-item .faq-answer {
+        display: none;  /* Answers are hidden by default */
+        margin-left: 20px;
+    }
+</style>
+</head>
+<body>
+
+<aside id="faq-sidebar">
+    <div id="faq-header">FAQ</div>
+    <div class="faq-item">
+        <div class="faq-question" onclick="toggleAnswer(1)">What is the name of SpongeBob's pet snail?</div>
+        <div class="faq-answer" id="answer-1">Gary the Snail</div>
+    </div>
+    <div class="faq-item">
+        <div class="faq-question" onclick="toggleAnswer(2)">What is the secret formula for the Krabby Patty?</div>
+        <div class="faq-answer" id="answer-2">Nice try, Plankton!</div>
+    </div>
+    <div class="faq-item">
+        <div class="faq-question" onclick="toggleAnswer(3)">Who is the squirrel that lives under the sea?</div>
+        <div class="faq-answer" id="answer-3">Sandy Cheeks</div>
+    </div>
+    <div class="faq-item">
+        <div class="faq-question" onclick="toggleAnswer(4)">What is the name of SpongeBob's boss?</div>
+        <div class="faq-answer" id="answer-4">Mr. Krabs</div>
+    </div>
+    <div class="faq-item">
+        <div class="faq-question" onclick="toggleAnswer(5)">Where does SpongeBob work?</div>
+        <div class="faq-answer" id="answer-5">The Krusty Krab</div>
+    </div>
+</aside>
+
+
+<header>
+    <div id="header-title">Bikini Bottom</div>
+    <nav id="header-nav">
+        <a href="#home">Home</a>
+        <a href="#characters">Characters</a>
+        <a href="#shop">Shop</a>
+        <a href="#games">Games</a>
+        <a href="#quotes">Famous Quotes</a>
+        <a href="#fan-club">Fan Club Page</a>
+        <a href="#fun-zone">Fun Zone</a>
+    </nav>
+</header>
+
+
+<h1>Spongebob</h1> <p>Spongebob is the <strong>greatest</strong> show of all time. One of my favorite moments is when <a href="https://spongebob.fandom.com/wiki/Patrick_Star">Patrick</a> blew a bubble of an elephant and said "Hahahaha, it's a giraffe!". </p> 
+<img src="https://i.pinimg.com/originals/00/58/91/0058917e3c345132044073ac2e20eb63.jpg" alt="Patrick Star Giraffe Quote">
+
+<section id="quiz-section">
+    <h2>Which SpongeBob Character Are You?</h2>
+    <p>Select options and find out which character from Bikini Bottom you resemble the most!</p>
+    <!-- Quiz Questions (simplified for brevity) -->
+    <div id="quiz">
+        <div class="quiz-question">Your favorite hobby?</div>
+        <input type="radio" name="q1" value="A" id="q1a"><label for="q1a">Jellyfishing</label><br>
+        <input type="radio" name="q1" value="B" id="q1b"><label for="q1b">Lifting Weights</label><br>
+        <input type="radio" name="q1" value="C" id="q1c"><label for="q1c">Playing Clarinet</label><br>
+        
+        <!-- (More questions can be added) -->
+        
+        <button onclick="calculateResult()">Find Out</button>
+    </div>
+</section>
+
+<script>
+    // JavaScript for navigation and quiz calculation (simplified for brevity)
+    function navigate(section) { alert('Navigate to ' + section); }
+    function calculateResult() { alert('Quiz result calculation (to be implemented)'); }
+
+    function toggleAnswer(id) {
+        var answer = document.getElementById('answer-' + id);
+        if (answer.style.display === 'block') {
+            answer.style.display = 'none';
+        } else {
+            answer.style.display = 'block';
+        }
+    }
+    </script>
+
+
+</body>
+</html>
